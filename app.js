@@ -20,8 +20,6 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(flash());
 mongoose.connect(process.env.DATABASEURL, {useMongoClient: true});
-// mongoose.connect("mongodb://localhost/yelp_camp", {useMongoClient: true});
-// mongoose.connect("mongodb://roy:yelpcamp_roy@ds149905.mlab.com:49905/yelpcamp_roy", {useMongoClient: true});
 app.use(express.static(__dirname + "/public"));
 app.use(require("express-session")({
     secret: '12345qwert',
